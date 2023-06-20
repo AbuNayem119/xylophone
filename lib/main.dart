@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:assets_audio_player/assets_audio_player.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,52 +28,42 @@ class MyApp extends StatelessWidget {
         body: Column(
           children: [
             Expanded(
-              child: Container(
-                height: 100.0,
-                color: Colors.red,
-                margin: EdgeInsets.all(5.0),
+              child: TextButton(
+                onPressed: (){
+
+                  final assetsAudioPlayer = AssetsAudioPlayer();
+                  assetsAudioPlayer.open(
+                    Audio("assets/note1.wav"),
+
+                  );
+                },
+                child: Container(
+                  height: 100.0,
+                  color: Colors.red,
+                  margin: EdgeInsets.all(5.0),
+                ),
               ),
             ),
             Expanded(
-              child: Container(
-                height: 100.0,
-                color: Colors.yellow,
-                margin: EdgeInsets.all(5.0),
+              child: Image(
+                image: AssetImage('images/img.jpg'),
               ),
             ),
             Expanded(
-              child: Container(
-                height: 100.0,
-                color: Colors.pink,
-                margin: EdgeInsets.all(5.0),
-              ),
-            ),
-            Expanded(
-              child: Container(
-                height: 100.0,
-                color: Colors.purpleAccent,
-                margin: EdgeInsets.all(5.0),
-              ),
-            ),
-            Expanded(
-              child: Container(
-                height: 100.0,
-                color: Colors.red,
-                margin: EdgeInsets.all(5.0),
-              ),
-            ),
-            Expanded(
-              child: Container(
-                height: 100.0,
-                color: Colors.yellow,
-                margin: EdgeInsets.all(5.0),
-              ),
-            ),
-            Expanded(
-              child: Container(
-                height: 100.0,
-                color: Colors.pink,
-                margin: EdgeInsets.all(5.0),
+              child: TextButton(
+                onPressed: (){
+
+                  final assetsAudioPlayer = AssetsAudioPlayer();
+                  assetsAudioPlayer.open(
+                    Audio("assets/note1.wav"),
+
+                  );
+                },
+                child: Container(
+                  height: 100.0,
+                  color: Colors.purple,
+                  margin: EdgeInsets.all(5.0),
+                ),
               ),
             ),
           ],
